@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,200;0,300;0,900;1,300&display=swap');
+
+*{
+    font-family: 'Piazzolla', serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bg:#1e272e;
+    --main-color:#0097e6;
+}
+
+html{
+    /* font-size: 62.5%; */
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main_menu{
+  background-color: var( --main-bg);
+}
+.navbar{
+    background-color:var( --main-bg);
+    padding: 10px;
+}
+.navbar li{
+margin-left:20px;
+}
+
+.navbar-toggler{
+    background-color:white;
+}
+.navbar-toggler-icon{
+ color:black;
+}
+.nav-link{
+    color:white;
+    font-size:1.2rem;
+}
+
+
+.main_header{
+    margin-top:153px;
+}
+
+.para1{
+    font-size: 1.5rem;
+    margin-bottom:40px;
+}
+.heading1{
+    margin-bottom:40px;
+    font-size: 2rem;
+}
+.span{
+    color:var(--main-color);
+}
+
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color:var(--main-color); 
+}
+
+@keyframes rot {
+0%{
+    transform: rotate(0deg);
+}    
+100%{
+    transform: rotate(360deg);
+}
+}
+
+.main_header_left button{
+border-color:var(--main-bg);
+padding:0.5rem 0.5rem 0.5rem 0.5rem;
+font-size: 1rem;
+border-radius: 1.5rem;
+text-transform: uppercase;
+box-shadow:0 8px 6px -6px #000;
+outline: none;
+}
+.main_header_left button:hover{
+    box-shadow:0 8px 6px -6px var(--main-color);
+}
+
+.main_header_right2 button{
+    border-color:var(--main-bg);
+    padding:0.5rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    text-transform: uppercase;
+    box-shadow:0 8px 6px -6px #000;
+    outline: none;
+    }
+    .main_header_right2 button:hover{
+        box-shadow:0 8px 6px -6px var(--main-color);
+    }
+    
+
+/* -----------------------------------------------footer code------------- */
+
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin: auto;
+    margin-top: 15rem;
+}
+
+footer p {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.4rem;
+}
+.main_header_right2{
+    margin-top:10rem;
+}
+/* ---------------------------------media query ------------------------------------*/
+@media(max-width:768px){
+.main_header_left{
+    height:auto;
+    margin:0 0 3rem 0 ;
+}
+.main_header_right{
+    height:auto;
+    margin:3rem 0 3rem 0 ;
+}
+.main_header_right2{
+    height:auto;
+    margin:3rem 0 3rem 0 ;
+}
+footer p{
+    font-size: 1rem;
+}
+
+}
+
+
+
+/* ----------------------weather page------------------------------ */
+
+.main_form{
+    display: flex;
+    justify-content: center;
+    margin-top: -5rem;
+}
+
+.main_form input{
+    padding:0.3rem 0.5rem 0.3rem 0.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    box-shadow:0 8px 6px -6px #000;
+    outline: none;
+    color: #fff;
+}
+
+.search{
+    border-radius: 25px 0 0 25px;
+    width:70%;
+    align-items: center;
+    background-color: var(--main-bg);
+    position: absolute;
+}
+
+.submit{
+    border-radius: 1.2rem;
+    align-items: center; 
+    border-color:var(--main-color);
+    width:10%; 
+    background-color: var(--main-color);
+    position: relative;
+    margin-left: 110vh;
+    color: white;
+}
+.submit:hover{
+    background-color: white;
+    color: black;
+}
+
+.tempinformation{
+width:30rem;
+margin:auto;
+margin-top:2rem;
+min-height: 20rem;
+background-color: #323544;
+border-radius: 1rem;
+padding: 1rem;
+font-family: "Roboto" , sans-serif;
+}
+.top-layer{
+    width:100%;
+    height: 30%;
+    background-color:#2d303d;
+    color: white;
+    display:flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    
+}
+.top-layer p{
+    font-weight: 300;
+}
+.middle_layer{
+    width:100%;
+    height: 30%;
+    color: white;
+    display:flex;
+   flex-direction: column;
+   padding: 2rem;
+}
+.middle_layer #city-name{
+font-weight: 300;
+font-size: 1rem;
+color:grey;
+}
+
+.middle_layer .main-layer{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+.middle_layer .main-layer p{
+font-size: 4rem;
+color:white;
+}
+.middle_layer .main-layer .fa{
+    font-size: 4rem;
+    color:var(--main-color);
+    }
+
+.data_hide{
+/* visibility:; */
+transition: all 0.2s linear;
+    }
+
+/* ---------------------------media query of weather------------------------ */
+@media(max-width:768px){
+
+    .search{
+        width:85%;
+        border-radius: 25px 25px 0 25px;
+    }
+    
+    .submit{
+        margin-left: 38vh;
+        width:25%
+    } 
+.tempinformation{
+    width:20rem;
+}
+}

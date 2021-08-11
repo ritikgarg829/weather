@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container-fluid main_menu">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+          <nav class="navbar navbar-expand-lg ">
+              <a class="navbar-brand" href="/"> <i class="fas fa-snowflake"></i> Ritik Garg <i class="fas fa-snowflake"></i></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/weather.html">WEATHER</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/about.html">ABOUT US</a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </div>
+</div>
+
+
+<!--------------------------------------------main content--------------------------------------------------------- --> 
+
+
+<div class="container-fluid main_header">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+           
+         <div class="main_content">
+             <form class="main_form">
+               <input class="search" type="text" id="cityname" placeholder="Enter your City Name" autocomplete="off">
+               <input class="submit" type="submit"  id="submitbtn" autocomplete="off">
+             </form>
+         </div>
+<div class="tempinformation">
+    <div class="top-layer">
+        <p id="day">WEDnesday</p>
+        <p id="today_date">12-aug-2021</p>
+    </div>
+    <div class="middle_layer">
+        <p id="city_name">get output here</p>
+        <div class="main-layer data_hide">
+            <p id="temp"><span id="temp_value">0</span><sup>o</sup>C</p>
+            <p id="temp_status"><i class="fa fa-cloud" aria-hidden="true"></i></p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+  <!-- --------------------------------------footer code -------------------------------------->
+  <footer>
+    <p>CREATED BY RITIK GARG WITH LOTS OF ❤ </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const getcurrentday = () =>{
+      let weekday = new Array(7);
+      weekday[0] = "Sunday";
+      weekday[1] = "Monday";
+      weekday[2] = "Tuesday";
+      weekday[3] = "Wednesday";
+      weekday[4] = "Thrushday";
+      weekday[5] = "Friday";
+      weekday[6] = "Saturday";
+      let currenttime = new Date();
+       days = weekday[currenttime.getDay()];
+      let day = document.getElementById('day');
+     day.innerText = days;
+    };
+    getcurrentday();
+
+  
+    // const getcurrenttime = () =>{
+    //   var months =[
+    //     "Jan",
+    //     "Feb",
+    //     "Mar",
+    //     "Apr",
+    //     "May",
+    //     "June",
+    //     "July",
+    //     "Aug",
+    //     "Sep",
+    //     "Oct",
+    //     "Nov",
+    //     "Dec",
+    //   ];
+
+    //   var now = new Date();
+    //   var hours = now.getHours();
+    //   var mins = now.getMinutes();
+    //   var month = months[now.getMonth() + 1];
+    //   var date = now.getDate();
+    //   var year = now.getFullYear();
+
+    // var period = "am";
+    // if (hours > 11){
+    //   period = "pm";
+    //   if (hours > 12) hours -= 12;
+    // }
+    // if (mins < 10){
+    //   mins = "0" + mins;
+    // }
+    // return ` ${month} ${date} | ${hours}:${mins}${period}`;
+    // };
+
+    // let today_date = document.getElementById('today_date');
+    //  today_date.innerText = getcurrentDay() + "|" + getcurrentTime()= today_date;
+
+    //  getcurrenttime();
+
+
+
+
+  </script>
+</body>
+</html>
